@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SalersService } from '../services/salers.service';
 
 @Component({
   selector: 'app-salers',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalersComponent implements OnInit {
 
-  constructor() { }
+  salers = [];
+
+  constructor(private salersService: SalersService) { }
 
   ngOnInit(): void {
+    // this.getSalers();
+  }
+
+  getSalers(): void {
+    this.salersService.getSalers()
+      .subscribe(data => {
+        console.log(data);
+        this.salers = data;
+      });
   }
 
 }

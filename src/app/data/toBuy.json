@@ -1,0 +1,24 @@
+{
+  "games": [
+    {
+      "name": "teste",
+      "console": "teste",
+      "id": 1
+    },
+    {
+      "name": "teste",
+      "console": "teste",
+      "id": 2
+    },
+    {
+      "name": "teste",
+      "console": "teste",
+      "id": 3
+    },
+    {
+      "name": "teste",
+      "console": "teste",
+      "id": 4
+    }
+  ]
+}

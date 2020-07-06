@@ -13,6 +13,9 @@ import { SalersComponent } from './salers/salers.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ProductsComponent } from './products/products.component';
 import { SalesComponent } from './sales/sales.component';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { GamesComponent } from './games/games.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { SalesComponent } from './sales/sales.component';
     SalersComponent,
     ClientsComponent,
     ProductsComponent,
-    SalesComponent
+    SalesComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { SalesComponent } from './sales/sales.component';
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    SharedModule,
+    HttpClientModule,
   ],
   providers: [Location],
   bootstrap: [AppComponent]
