@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+  <h1>Vendedores</h1>
+  <table class="table table-sm table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>name</th>
+        <th>address</th>
+        <th>age</th>
+        <th>
+          <button (click)="addSaler()" type="button" class="btn btn-sm">Add</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let saler of salers">
+        <td>{{saler.name}}</td>
+        <td>{{saler.address}}</td>
+        <td>{{saler.age}}</td>
+        <td>
+          <button (click)="editSaler()" type="button" class="btn btn-sm">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

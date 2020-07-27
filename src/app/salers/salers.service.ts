@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class GamesService {
+export class SalersService {
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,21 +11,12 @@ export class GamesService {
 
   constructor(private http: HttpClient) { }
 
-  getGames(): Observable<any>  {
+  getAllSalers(): Observable<any>  {
     return this.http
-    .get(`/api/users`);
+    .get(`/api/salers`);
   }
 
-  getTeste(): Observable<any>  {
-    return this.http
-    .get(`/api/products`);
+  saveSaler(saler: any): Observable<any>  {
+    return this.http.post(`/api/saler`, {saler});
   }
-
-  saveGame(game: any): Observable<any>  {
-    return this.http.post(`/api/game`, {game});
-  }
-
-
-
-
 }

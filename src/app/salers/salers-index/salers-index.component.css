@@ -1,0 +1,11 @@
+h1, table {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+button {
+    border-radius: 15px;
+}
+button:hover {
+    background-color: lightgray;
+}

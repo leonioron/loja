@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from '../services/games.service';
-// const toBuy = require('../data/toBuy.json');
 
 @Component({
   selector: 'app-games',
@@ -14,22 +13,11 @@ export class GamesComponent implements OnInit {
   constructor(private gamesService: GamesService) { }
 
   ngOnInit(): void {
-    // this.gamesService.getGames()
-    // .then(data => {
-    //   this.games = data;
-    //   console.log(this.games);
-    // });
+    this.gamesService.getGames()
+    .subscribe(data => {
+      console.log(data);
+    });
 
-    // const game = {
-    //   name: 'teste',
-    //   console: 'teste'
-    // };
-    // this.gamesService.saveGame(game).subscribe(data => {
-    //   this.gamesService.getGames()
-    //     .then(response => {
-    //       this.games = response;
-    //     });
-    // });
   }
 
 }

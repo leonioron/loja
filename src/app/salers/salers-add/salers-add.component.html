@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+  <h1>Cadastro de vendedor</h1>
+  <form>
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" class="form-control" placeholder="Digite o nome" (keyup)="changeName($event)">
+    </div>
+    <div class="form-group">
+      <label>Endereço</label>
+      <input type="text" class="form-control" placeholder="Digite o endereço" (keyup)="changeAddress($event)">
+    </div>
+    <div class="form-group">
+        <label>Idade</label>
+        <input type="number" class="form-control"placeholder="Digite a idade" (keyup)="changeAge($event)">
+      </div>
+      <button (click)="back()" type="button" class="btn btn-primary">Voltar</button>
+      <button (click)="save()" type="button" class="btn btn-primary">Submit</button>
+  </form>
+</div>
